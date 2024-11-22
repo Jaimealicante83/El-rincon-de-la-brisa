@@ -6,10 +6,12 @@ const Main = () => {
     <>
 <Hero
   title="El Rincón de la Brisa"
-  paragraph="El mejor servicio desde 1996. Un lugar único para disfrutar con familia y amigos."
+  paragraph="El Rincón de la Brisa es más que un restaurante, es una experiencia culinaria
+   que despierta todos los sentidos. En cada plato, combinamos técnicas innovadoras con los 
+   mejores ingredientes de la región, creando una fusión"
   buttonText="Reservar"
   buttonLink="#reservar"
-  image1="/path/to/image-main.jpg"
+  image1="/plato.png"
   variant="main"
 />
     </>

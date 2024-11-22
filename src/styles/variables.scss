@@ -1,0 +1,19 @@
+/* Colores */
+body,html{
+    font-size: 62.5%;
+}
+$primary-gradient: linear-gradient(to right, #016c8e, #02a2a1);
+$blue: blue; /* Color de fondo temporal */
+$white: #ffffff;
+
+/* Tipografía */
+$font-primary: 'Poiret One', sans-serif; /* Fuente para títulos */
+$font-secondary: 'Lato', sans-serif;    /* Fuente para párrafos */
+
+/* Tamaños Tipográficos */
+$font-size-title-lg: 6.4rem;
+$line-height-title-lg: 6.9rem;
+
+/* Tamaños generales */
+$font-size-paragraph: 1.6rem;
+$line-height-paragraph: 2.4rem;

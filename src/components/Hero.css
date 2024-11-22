@@ -1,99 +1,178 @@
-/* Variables */
-$primary-gradient: linear-gradient(to right, #016c8e, #02a2a1);
-$text-color: white;
+@charset "UTF-8";
+/* Colores */
+body, html {
+  font-size: 62.5%;
+}
 
-/* Hero Section */
+/* Color de fondo temporal */
+/* Tipografía */
+/* Fuente para títulos */
+/* Fuente para párrafos */
+/* Tamaños Tipográficos */
+/* Tamaños generales */
+/* Importa solo variables necesarias */
+/* Colores */
+body, html {
+  font-size: 62.5%;
+}
+
+/* Color de fondo temporal */
+/* Tipografía */
+/* Fuente para títulos */
+/* Fuente para párrafos */
+/* Tamaños Tipográficos */
+/* Tamaños generales */
+/* Importa las variables */
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif; /* Fuente global (Lato) */
+  background: blue; /* Color de fondo */
+  color: #ffffff; /* Color de texto */
+}
+
+body, html {
+  font-size: 62.5%; /* Tamaño de fuente base */
+}
+
+/* Estilos globales */
+.title-lg {
+  font-family: "Poiret One", sans-serif; /* Fuente para títulos grandes (Poiret One) */
+  font-size: 6.4rem;
+  line-height: 6.9rem;
+  margin-bottom: 1.9rem;
+}
+
+/* Global Typography Styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Poiret One", sans-serif;
+  text-transform: uppercase; /* Todos los títulos y subtítulos en mayúsculas */
+}
+
+p {
+  font-family: "Lato", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 2.4rem;
+}
+
+/* Botones estilos */
+.btn {
+  display: inline-flex; /* Alineación flexible */
+  justify-content: center; /* Centrado horizontal */
+  align-items: center; /* Centrado vertical */
+  width: 17.5rem; /* 175px */
+  height: 4.9rem; /* 49px */
+  padding: 0; /* Sin padding adicional */
+  font-family: "Lato", sans-serif; /* Fuente secundaria (Lato) */
+  font-size: 1.6rem; /* 16px */
+  text-transform: uppercase; /* Texto en mayúsculas */
+  text-decoration: none; /* Sin subrayado */
+  text-align: center; /* Centrado del texto */
+  font-weight: bold; /* Peso del texto */
+  color: #ffffff; /* Color del texto */
+  background-color: transparent; /* Fondo transparente */
+  border: 1px solid #ffffff; /* Borde blanco de 1px */
+  border-radius: 0; /* Sin esquinas redondeadas */
+  transition: all 0.3s ease; /* Transición suave para hover */
+}
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Fondo blanco semitransparente */
+  color: #ffffff; /* Asegura que el texto siga siendo blanco */
+}
+.btn:active {
+  transform: scale(0.98); /* Efecto al presionar el botón */
+}
+
+/* Si los estilos globales incluyen variables, puedes usar solo esto */
 .hero {
+  background: linear-gradient(to right, #016c8e, #02a2a1);
+}
+.hero .container {
+  max-width: 120rem; /* 1200px */
+  height: 100vh;
+  margin: 0 auto;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding: 50px 20px;
-  background: $primary-gradient;
-  color: $text-color;
-
-  /* Contenedor General */
-  .container {
-    max-width: 1200px; /* Establece el ancho máximo */
-    width: 100%; /* Asegura que el contenedor sea responsivo */
-    margin: 0 auto; /* Centra horizontalmente */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    /* Hero Content */
-    .hero-content {
-      flex: 1;
-      padding-right: 20px;
-
-      .hero-title {
-        font-size: 3rem;
-        margin-bottom: 20px;
-      }
-
-      .hero-description {
-        font-size: 1.2rem;
-        line-height: 1.8;
-        margin-bottom: 20px;
-      }
-
-      .hero-button {
-        padding: 10px 20px;
-        text-decoration: none;
-        background-color: white;
-        color: $primary-gradient;
-        border-radius: 5px;
-        transition: all 0.3s ease;
-
-        &:hover {
-          background-color: #02a2a1;
-          color: white;
-        }
-      }
-    }
-
-    /* Hero Images */
-    .hero-images {
-      display: flex;
-      gap: 20px;
-
-      .hero-image {
-        width: 300px;
-        height: 400px;
-        object-fit: cover;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-      }
-    }
-  }
+}
+.hero .hero-content {
+  flex: 1;
+  max-width: 43.5rem; /* 435px */
+}
+.hero .hero-content .hero-title {
+  font-family: "Poiret One", sans-serif; /* Fuente para títulos (Poiret One) */
+  font-size: 6.4rem;
+  line-height: 6.9rem;
+  color: #ffffff;
+  margin-bottom: 2rem; /* 20px */
+}
+.hero .hero-content .hero-description {
+  margin-bottom: 3rem; /* Mantiene 3rem */
+  color: #ffffff;
+}
+.hero .hero-content .hero-button {
+  color: blue;
+  background-color: #ffffff;
+}
+.hero .hero-content .hero-button:hover {
+  background-color: #02a2a1;
+  color: #ffffff;
+}
+.hero .hero-image-main {
+  text-align: center;
+}
+.hero .hero-image-main .hero-image {
+  width: auto;
+  height: 52rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+.hero .hero-images {
+  display: flex;
+  gap: 2rem; /* 20px */
+}
+.hero .hero-images .hero-image {
+  width: 30rem; /* 300px */
+  height: 40rem; /* 400px */
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1rem; /* 10px */
+  box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.2); /* 4px y 6px */
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+/* Estilo responsivo para pantallas pequeñas */
+@media (max-width: 76.8rem) { /* 768px */
   .hero {
-    .container {
-      flex-direction: column;
-
-      .hero-content {
-        text-align: center;
-        padding-right: 0;
-
-        .hero-title {
-          font-size: 2rem;
-        }
-
-        .hero-description {
-          font-size: 1rem;
-        }
-      }
-
-      .hero-images {
-        flex-direction: column;
-
-        .hero-image {
-          width: 90%;
-          height: auto;
-        }
-      }
-    }
+    flex-direction: column;
+    padding: 2rem; /* 20px */
   }
-}
+  .hero .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero .hero-content {
+    margin-bottom: 2rem; /* 20px */
+  }
+  .hero .hero-content .hero-title {
+    font-size: 2rem; /* Mantiene el ajuste para pantallas pequeñas */
+    line-height: 2.5rem;
+  }
+  .hero .hero-content .hero-description {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .hero .hero-images {
+    flex-direction: column;
+  }
+  .hero .hero-images .hero-image {
+    width: 90%; /* Mantiene 90% */
+    height: auto;
+  }
+}/*# sourceMappingURL=Hero.css.map */
