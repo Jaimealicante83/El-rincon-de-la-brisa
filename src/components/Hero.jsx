@@ -26,8 +26,8 @@ const Hero = ({ title, paragraph, buttonText, buttonLink, image1, image2, varian
                 ></path>
               </defs>
               <text>
-                <textPath href="#circle-path" startOffset="50%">
-                  Desde 1996 
+                <textPath href="#circle-path" startOffset="0%">
+                • El mejor servicio desde 1996 • 
                 </textPath>
               </text>
             </svg>
