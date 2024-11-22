@@ -1,28 +1,39 @@
-/* Nav.scss */
 .nav {
-  background-color: #333;
-  padding: 10px;
+  padding: 1rem; /* 10px */
+  position: absolute;
+  top: 2rem;
+  width: 100%;
 }
-
-.nav-list {
+.nav .container-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+.nav .container-nav img {
+  height: 5rem;
+  width: auto;
+}
+.nav .nav-list {
   list-style: none;
   display: flex;
   justify-content: space-around;
   margin: 0;
   padding: 0;
 }
-
-.nav-item {
+.nav .nav-list .nav-item {
   margin: 0;
 }
-
-.nav-item a {
+.nav .nav-list .nav-item a {
+  font-size: 1.4rem;
   color: white;
   text-decoration: none;
-  padding: 10px 20px;
+  padding: 1rem 2rem;
   display: block;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
 }
-
-.nav-item a:hover {
-  background-color: #555;
+.nav .nav-list .nav-item a:hover {
+  color: yellow;
 }/*# sourceMappingURL=Nav.css.map */

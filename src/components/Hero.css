@@ -10,7 +10,6 @@ body, html {
 /* Fuente para párrafos */
 /* Tamaños Tipográficos */
 /* Tamaños generales */
-/* Importa solo variables necesarias */
 /* Colores */
 body, html {
   font-size: 62.5%;
@@ -44,6 +43,7 @@ body, html {
 .title-lg {
   font-family: "Poiret One", sans-serif; /* Fuente para títulos grandes (Poiret One) */
   font-size: 6.4rem;
+  font-weight: 100;
   line-height: 6.9rem;
   margin-bottom: 1.9rem;
 }
@@ -89,9 +89,9 @@ p {
   transform: scale(0.98); /* Efecto al presionar el botón */
 }
 
-/* Si los estilos globales incluyen variables, puedes usar solo esto */
 .hero {
   background: linear-gradient(to right, #016c8e, #02a2a1);
+  position: relative;
 }
 .hero .container {
   max-width: 120rem; /* 1200px */
@@ -106,73 +106,112 @@ p {
   max-width: 43.5rem; /* 435px */
 }
 .hero .hero-content .hero-title {
-  font-family: "Poiret One", sans-serif; /* Fuente para títulos (Poiret One) */
+  font-family: "Poiret One", sans-serif;
   font-size: 6.4rem;
   line-height: 6.9rem;
   color: #ffffff;
-  margin-bottom: 2rem; /* 20px */
+  margin-bottom: 2rem;
 }
 .hero .hero-content .hero-description {
-  margin-bottom: 3rem; /* Mantiene 3rem */
+  margin-bottom: 3rem;
   color: #ffffff;
 }
 .hero .hero-content .hero-button {
-  color: blue;
   background-color: #ffffff;
+  color: darkblue;
 }
 .hero .hero-content .hero-button:hover {
   background-color: #02a2a1;
   color: #ffffff;
 }
 .hero .hero-image-main {
+  position: relative;
+  width: 50rem; /* Tamaño del contenedor */
+  height: 50rem;
   text-align: center;
 }
+.hero .hero-image-main svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(0deg); /* Rotación inicial */
+  animation: rotate-circle 10s linear infinite; /* Animación */
+}
+.hero .hero-image-main text {
+  font-family: "Poiret One", sans-serif;
+  font-size: 1.2rem;
+  fill: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
 .hero .hero-image-main .hero-image {
-  width: auto;
-  height: 52rem;
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
 }
 .hero .hero-images {
   display: flex;
-  gap: 2rem; /* 20px */
+  gap: 4rem;
+  align-items: flex-end;
+  margin-bottom: -3rem;
 }
 .hero .hero-images .hero-image {
-  width: 30rem; /* 300px */
-  height: 40rem; /* 400px */
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 1rem; /* 10px */
-  box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.2); /* 4px y 6px */
+  width: 30rem;
+  height: 30rem;
+}
+.hero .hero-images .hero-image.hero-image-small {
+  height: 34.7rem;
+}
+.hero .hero-images .hero-image.hero-image-big {
+  height: 47rem;
 }
 
+/* Animación de rotación */
+@keyframes rotate-circle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /* Estilo responsivo para pantallas pequeñas */
 @media (max-width: 76.8rem) { /* 768px */
   .hero {
     flex-direction: column;
-    padding: 2rem; /* 20px */
+    padding: 2rem;
   }
   .hero .container {
     flex-direction: column;
     text-align: center;
   }
   .hero .hero-content {
-    margin-bottom: 2rem; /* 20px */
+    margin-bottom: 2rem;
   }
   .hero .hero-content .hero-title {
-    font-size: 2rem; /* Mantiene el ajuste para pantallas pequeñas */
+    font-size: 2rem;
     line-height: 2.5rem;
   }
   .hero .hero-content .hero-description {
     font-size: 1rem;
     line-height: 1.5rem;
   }
+  .hero .hero-image-main {
+    width: 15rem;
+    height: 15rem;
+  }
+  .hero .hero-image-main svg {
+    font-size: 0.8rem;
+  }
   .hero .hero-images {
     flex-direction: column;
   }
   .hero .hero-images .hero-image {
-    width: 90%; /* Mantiene 90% */
+    width: 90%;
     height: auto;
   }
 }/*# sourceMappingURL=Hero.css.map */

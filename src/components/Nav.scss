@@ -1,28 +1,45 @@
-/* Nav.scss */
 .nav {
-    background-color: #333;
-    padding: 10px;
+    padding: 1rem; /* 10px */
+    position: absolute;
+    top: 2rem;
+    width: 100%;
+  
+    .container-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+      margin: 0 auto;
+      img{
+        height: 5rem;
+        width: auto;
+      }
+    }
+  
+    .nav-list {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      margin: 0;
+      padding: 0;
+  
+      .nav-item {
+        margin: 0;
+  
+        a {
+          font-size: 1.4rem;
+          color: white;
+          text-decoration: none;
+          padding: 1rem 2rem; 
+          display: block;
+          text-transform: uppercase;
+          transition: all .3s ease-in-out;
+  
+          &:hover {
+           color:yellow;
+          }
+        }
+      }
+    }
   }
   
-  .nav-list {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .nav-item {
-    margin: 0;
-  }
-  
-  .nav-item a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    display: block;
-  }
-  
-  .nav-item a:hover {
-    background-color: #555;
-  }

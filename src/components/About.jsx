@@ -4,10 +4,10 @@ import Hero from './Hero';
 const About = () => {
   return (
     <Hero
-      title="La experiencia"
-      paragraph="Descubre nuestro menú: una selección diseñada para deleitar todos los paladares."
-      image1="/path/to/image1.jpg"
-      image2="/path/to/image2.jpg"
+      title="Descubre la experiencia"
+      paragraph="Descubre la esencia de El Rincón de la Brisa desde la selección de productos frescos y de calidad, hasta la creación de platos únicos que combinan tradición y modernidad. Sumérgete en el encanto de nuestra terraza mediterránea y déjate sorprender por un equipo galardonado por su pasión y excelencia."
+      image1="/red-wine.jpg"
+      image2="/couple-dinner.jpg"
       variant="default"
     />
   );

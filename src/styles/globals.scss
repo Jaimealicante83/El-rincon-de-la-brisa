@@ -21,6 +21,7 @@ body, html{
 .title-lg {
   font-family: $font-primary; /* Fuente para títulos grandes (Poiret One) */
   font-size: $font-size-title-lg;
+  font-weight: 100;
   line-height: $line-height-title-lg;
   margin-bottom: 1.9rem;
 }

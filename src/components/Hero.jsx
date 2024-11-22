@@ -17,13 +17,26 @@ const Hero = ({ title, paragraph, buttonText, buttonLink, image1, image2, varian
           )}
         </div>
         {variant === 'main' ? (
-          <div className="hero-image-main">
+          <div className="hero-image-main circular-text">
+            <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <path
+                  id="circle-path"
+                  d="M60,60 m-50,0 a50,50 0 1,1 100,0 a50,50 0 1,1 -100,0"
+                ></path>
+              </defs>
+              <text>
+                <textPath href="#circle-path" startOffset="50%">
+                  Desde 1996 
+                </textPath>
+              </text>
+            </svg>
             <img src={image1} alt="Imagen principal" className="hero-image" />
           </div>
         ) : (
           <div className="hero-images">
-            <img src={image1} alt="Imagen 1" className="hero-image" />
-            <img src={image2} alt="Imagen 2" className="hero-image" />
+            <img src={image1} alt="Imagen 1" className="hero-image hero-image-small" />
+            <img src={image2} alt="Imagen 2" className="hero-image hero-image-big" />
           </div>
         )}
       </div>
