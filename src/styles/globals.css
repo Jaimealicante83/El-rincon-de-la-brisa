@@ -4,7 +4,6 @@ body, html {
   font-size: 62.5%;
 }
 
-/* Color de fondo temporal */
 /* Tipografía */
 /* Fuente para títulos */
 /* Fuente para párrafos */
@@ -20,7 +19,7 @@ body, html {
 
 body {
   font-family: "Lato", sans-serif; /* Fuente global (Lato) */
-  background: blue; /* Color de fondo */
+  background: #f1f1f1;
   color: #ffffff; /* Color de texto */
 }
 
@@ -37,9 +36,17 @@ body, html {
   margin-bottom: 1.9rem;
 }
 
+.container {
+  max-width: 120rem;
+  display: flex;
+  margin: 16.2rem auto;
+}
+
 /* Global Typography Styles */
 h1, h2, h3, h4, h5, h6 {
+  font-size: 4rem;
   font-family: "Poiret One", sans-serif;
+  font-weight: 300;
   text-transform: uppercase; /* Todos los títulos y subtítulos en mayúsculas */
 }
 
@@ -48,6 +55,12 @@ p {
   font-size: 1.6rem;
   font-weight: 300;
   line-height: 2.4rem;
+}
+
+.caption {
+  font-family: "Lato", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 100;
 }
 
 /* Botones estilos */

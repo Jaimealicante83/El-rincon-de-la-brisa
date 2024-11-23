@@ -9,7 +9,7 @@
 
 body {
   font-family: $font-secondary; /* Fuente global (Lato) */
-  background: $blue; /* Color de fondo */
+  background: $grey-bg;
   color: $white; /* Color de texto */
 }
 
@@ -25,11 +25,25 @@ body, html{
   line-height: $line-height-title-lg;
   margin-bottom: 1.9rem;
 }
+.container {
+  margin: 6rem 2rem;
+  @media screen and (min-width: 993px){
+    max-width: 120rem; 
+    display: flex;
+    margin: 16.2rem auto;
+  }
+}
 
 /* Global Typography Styles */
 h1, h2, h3, h4, h5, h6 {
+    font-size: 4rem;
     font-family: $font-primary;
+    font-weight: 300;
     text-transform: uppercase; /* Todos los títulos y subtítulos en mayúsculas */
+  }
+
+  h2{
+    margin-bottom: 4rem;
   }
   
   p {
@@ -37,6 +51,16 @@ h1, h2, h3, h4, h5, h6 {
     font-size: $font-size-paragraph;
     font-weight: 300;
     line-height: $line-height-paragraph;
+  }
+  .caption{
+    font-family: $font-secondary;
+    font-size: 1.4rem;
+    font-weight: 300;
+  }
+  .mini-subtitulo{
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    font-weight: 500;
   }
 /* Botones estilos */
 .btn {

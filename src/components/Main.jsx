@@ -17,18 +17,87 @@ const Main = () => {
         variant="main"
       />
       <section className="nuestro-restaurante">
-        <h2>Nuesto Restaurante</h2>
-        <p>"El Rincón de la Brisa" es más que un restaurante; es una experiencia culinaria que
-          despierta todos los sentidos. En cada plato, combinamos técnicas innovadoras con los 
-          mejores ingredientes de la región, creando una fusión única que rinde homenaje a la
-          cocina de autor. Nuestro compromiso es ofrecer una experiencia acogedora y sofisticada,
-          donde cada detalle está diseñado para deleitar.</p>
-          <p>Desde el momento en que entras, serás recibido con una atmósfera cálida
-            y elegante, ideal para disfrutar de una cena íntima, una celebración especial
-            o simplemente dejarte llevar por el placer de los sabores auténticos. Nuestro
-            equipo de chefs trabaja con pasión para presentar platos que cuentan una historia,
-            cuidadosamente elaborados para brindar una experiencia inolvidable.
-          </p>
+        <div className="container">
+          <div className="box-texto">
+            <h2>Nuestro Restaurante</h2>
+            <p>"El Rincón de la Brisa" es más que un restaurante; es una experiencia culinaria que
+              despierta todos los sentidos. En cada plato, combinamos técnicas innovadoras con los 
+              mejores ingredientes de la región, creando una fusión única que rinde homenaje a la
+              cocina de autor. Nuestro compromiso es ofrecer una experiencia acogedora y sofisticada,
+              donde cada detalle está diseñado para deleitar.</p>
+            <p>Desde el momento en que entras, serás recibido con una atmósfera cálida
+                y elegante, ideal para disfrutar de una cena íntima, una celebración especial
+                o simplemente dejarte llevar por el placer de los sabores auténticos. Nuestro
+                equipo de chefs trabaja con pasión para presentar platos que cuentan una historia,
+                cuidadosamente elaborados para brindar una experiencia inolvidable.
+            </p>
+            <button className="btn">Ver más</button>
+          </div>
+          <div className="box-img">
+            <img src="/el-restaurante.jpg" alt="Restaurante" />
+          </div>
+        </div>
+      </section>
+      <section className="banner">
+      <img src="/banner.jpg" alt="Banner" />
+        <h2 class="cita">“Disfruta de una experiencia gastronomica sin igual 
+        en la terraza con vistas al Mediterraneo”</h2>
+      </section>
+
+      <section className="entorno">
+        <div className="container">
+          <div className="div1"> <h2>Un entorno sin igual</h2></div>
+          <div className="div2">  <img src="/cocinero-entorno.jpg" alt="Un cocinero elabora un plato en la cocina" /></div>
+          <div className="div3"> <p className="caption">
+              Te invitamos a disfrutar de la alta cocina mediterránea del
+              Chef Carlos Morales en un paraje junto al mar y unas vistas increibles.
+            </p></div>
+        
+          <div className="div4">  
+            <img src="/entorno-cena.jpg" alt="Una pareja cena en nuestro restaurante al atardecer" />
+          </div>
+          <div className="div5">
+            <p class="caption">Una historia de excelencia junto al Mediterráneo desde 1996. Reconocido con tres estrellas Michelin
+             y múltiples galardones internacionales que avalan nuestra pasión por la alta gastronomía.</p>
+          </div>
+          <div className="div6">
+            <img src="/platos-mar.jpg" id="seleccion-platos" alt="Una selección de platos" />
+          </div>
+        </div>
+      </section>
+
+      <section className="nuestra-cocina">
+        <div className="container">
+          <h2>Nuestro restaurante</h2>
+          <div className="wrapper-platos">
+            <div className="card-plato">
+              <img src="/bistec.jpg" alt="Bistec" />
+              <h3 className="mini-subtitulo">Bistec</h3>
+              <p className="caption">
+              Descubre nuestro Bistec de Res Premium, jugoso y acompañado de una reducción de vino 
+              tinto y toques de trufa negra. Creación del Chef Carlos Morales para deleitarte en un 
+              entorno con vistas al mar.
+              </p>
+            </div>
+            <div className="card-plato">
+              <img src="/salmon.jpg" alt="Salmon" />
+              <h3 className="mini-subtitulo">Salmón marinado</h3>
+              <p className="caption">
+              Disfruta de nuestro Salmón Crudo, marinado con una salsa balsámica de mango y decorado 
+              con delicados pétalos de flor violeta. Una creación fresca y sofisticada que despierta
+              los sentidos.
+              </p>
+            </div> 
+            <div className="card-plato">
+              <img src="/postre.jpg" alt="Postre" />
+              <h3 className="mini-subtitulo">Postre de galleta desmigada</h3>
+              <p className="caption">
+              Deléitate con nuestro postre de galleta desmigada, coronado con cremoso chocolate fundido
+              y sutiles toques de flor de sal. Un final dulce, elegante y lleno de texturas.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
     </>
   );
