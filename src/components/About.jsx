@@ -40,6 +40,64 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      <section class="productos-frescos">
+        <div class="container">
+          <h2>Productos siempre frescos</h2>
+          <div class="productos-frescos-wrapper">
+            <img src="./mercadillo.jpg" alt="Mercadillo" class="large-img" />
+            <p class="caption">
+              De la plaza a tu plato: así empieza nuestra historia cada día.
+              Recorremos los mejores mercados locales seleccionando
+              personalmente cada ingrediente, para que solo lo más fresco y
+              selecto llegue a nuestra cocina. Seguimos cada paso del proceso
+              con dedicación y cariño, desde la cuidadosa elección de los
+              productos hasta el momento final del servicio en mesa. La calidad
+              es el centro de todo lo que hacemos.
+            </p>
+            <img src="./verduras.jpg" alt="Verduras" class="small-img" />
+            <img src="./cortando-verduras.jpg" alt="Un cocinero corta verduras" class="wide-img" />
+          </div>
+        </div>
+      </section>
+
+      <section className="lugar">
+        <div className="container">
+          <h2>Un lugar para disfrutar</h2>
+          <div className="lugar-wrapper">
+            <p>En "El Rincón de la Brisa", cada visita es un deleite para los sentidos. Comer 
+              en nuestra terraza con vistas impresionantes al mar es mucho más que una comida, 
+              es una experiencia que combina sabores y paisajes. Los clientes disfrutan de exquisitos
+              platos mediterráneos, preparados con ingredientes frescos, mientras se relajan con la 
+              suave brisa marina y una vista única. La experiencia gastronómica se complementa con un 
+              ambiente visual que invita al descanso, creando momentos memorables e inigualables.</p>
+            <img src="/atardecer.jpg" alt="atardecer desde nuestra terraza" />
+            <p className="caption">Disfruta de nuestra cocina de alta calidad en una terraza con vistas al mar Mediterraneo</p>
+            <img src="/chica-terraza.jpg" alt="Una mujer disfruta de la terraza" />
+          </div>
+        </div>
+      </section>
+
+      <section className="equipo">
+        <div className="container">
+          <h2>EL equipo</h2>
+          <p>
+            El equipo de cocineros de "El Rincón de la Brisa" es el alma de nuestra cocina mediterránea.
+            Formados en las mejores escuelas de cocina del mundo, nuestros chefs aportan dedicación y
+            experiencia a cada plato. Seleccionamos ingredientes locales de alta calidad para ofrecer
+            una experiencia gastronómica que respeta las raíces mediterráneas, con un toque especial que
+            hace cada creación memorable. Su compromiso y pasión garantizan que cada visita sea única y llena de sabor.
+          </p>
+          <img src="./cocinero-atardecer.jpg" alt="Un cocinero prepara un plato en la terraza al atardecer" />
+          <img src="./equipo-cocina.jpg" alt="El equipo de cocineros del rincón de la brisa" />
+          <div className="imagenes-derecha">
+            <img src="./cocinera.jpg" alt="Una cocinera en nuestra terraza" />
+            <img src="./camarero.jpg" alt="Un camarero en la terraza" />
+          </div>
+          <img src="./chef-atardecer.jpg" alt="El chef del rincón de la brisa en la terraza al atardecer" />
+        </div>
+      </section>
+
     </>
   );
 };
