@@ -1,0 +1,62 @@
+.nuestros-platos {
+    .container {
+      display: grid;
+      grid-template-columns: 25% 25% 1fr; // First two columns are 20%, last column fills the rest
+      grid-template-rows: 1fr; // Make the row stretch to fill the container
+      grid-template-areas:
+        "box-texto box-texto imagen-ostra"
+        "imagen-risotto imagen-caballa imagen-ostra";
+      gap: 4rem; // Space between elements
+  
+      height: 100%; // Ensure the grid container takes up full height
+      align-items: stretch; // Make all items stretch vertically
+  
+      .box-texto {
+        grid-area: box-texto; // Occupies the left column
+        max-width: 70%;
+        h2 {
+
+        }
+        p {
+          margin-bottom: 5rem;
+           // Adjust space below
+        }
+      }
+
+      .caption{
+        text-align: right;
+        margin-bottom: 1.5rem;
+      }
+  
+      .imagen-risotto {
+        grid-area: imagen-risotto;
+        justify-self: stretch; // Stretch horizontally
+        align-self: stretch; // Stretch vertically
+        img {
+
+        }
+      }
+  
+      .imagen-caballa {
+        grid-area: imagen-caballa;
+        img {
+
+        }
+      }
+  
+      .imagen-ostra {
+        grid-area: imagen-ostra; // Occupies the right column
+        justify-self: flex-end; // Stretch horizontally
+        align-self: flex-end; // Stretch vertically
+        .caption{
+            max-width: 60%;
+            justify-self: flex-end;
+        }
+        img {
+          width: 100%;
+          //max-height: 80%;
+        }
+      }
+    }
+  }
+  

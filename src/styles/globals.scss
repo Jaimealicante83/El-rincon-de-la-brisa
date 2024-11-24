@@ -10,23 +10,29 @@
 body {
   font-family: $font-secondary; /* Fuente global (Lato) */
   background: $grey-bg;
-  color: $white; /* Color de texto */
+  color: $black-text; /* Color de texto */
 }
 
 body, html{
     font-size: 62.5%; /* Tamaño de fuente base */
+    overflow-x: hidden;
 }
 
 /* Estilos globales */
 .title-lg {
   font-family: $font-primary; /* Fuente para títulos grandes (Poiret One) */
-  font-size: $font-size-title-lg;
+  font-size: $font-size-title-sm;
   font-weight: 100;
-  line-height: $line-height-title-lg;
+  line-height: $line-height-title-sm;
   margin-bottom: 1.9rem;
+  color: $white;
+  @media screen and (min-width: 993px){
+    font-size: $font-size-title-lg;
+    line-height: $line-height-title-lg;
+  }
 }
 .container {
-  margin: 6rem 2rem;
+  margin: 6rem 0;
   @media screen and (min-width: 993px){
     max-width: 120rem; 
     display: flex;
@@ -70,7 +76,6 @@ h1, h2, h3, h4, h5, h6 {
     width: 17.5rem; /* 175px */
     height: 4.9rem; /* 49px */
     padding: 0; /* Sin padding adicional */
-  
     font-family: $font-secondary; /* Fuente secundaria (Lato) */
     font-size: 1.6rem; /* 16px */
     text-transform: uppercase; /* Texto en mayúsculas */

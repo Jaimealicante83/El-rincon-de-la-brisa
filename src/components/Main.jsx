@@ -99,6 +99,27 @@ const Main = () => {
           </div>
         </div>
       </section>
+
+      <section className="chef-morales">
+        <div className="container">
+          <div className="box-imagen">
+            <img src="./carlos-morales.jpg" alt="El chef Carlos Morales" />
+          </div>
+          <div className="box-texto">
+            <h2>Chef Carlos Morales</h2>
+            <p>El Chef Carlos Morales, apasionado de la cocina desde su juventud, dio sus primeros pasos en el 
+              mundo culinario al lado de su abuela, quien le enseñó a valorar los ingredientes frescos y 
+              la cocina tradicional mediterránea. Con una creatividad innata y un deseo constante de superación,
+              Carlos se formó en prestigiosas escuelas de gastronomía europeas, perfeccionando técnicas clásicas
+              y desarrollando su estilo único que fusiona tradición e innovación.</p>
+            <p>En 1996, fundó su primer restaurante, un lugar donde la cocina mediterránea cobraba vida
+              con toques modernos y sorpresas sensoriales. Desde entonces, su establecimiento ha sido
+              reconocido como un referente en alta cocina, recibiendo numerosos premios por sus platos 
+              innovadores que combinan sabores inesperados y presentaciones artísticas. </p>
+              <img src="./firma.png" alt="Firma del chef Carlos Morales" />
+          </div>
+        </div>
+      </section>
     </>
   );
 };
