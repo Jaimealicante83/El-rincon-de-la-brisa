@@ -38,11 +38,12 @@ const Main = () => {
           </div>
         </div>
       </section>
-      <section className="banner">
+      
+      <aside className="banner">
       <img src="/banner.jpg" alt="Banner" />
         <h2 class="cita">“Disfruta de una experiencia gastronomica sin igual 
         en la terraza con vistas al Mediterraneo”</h2>
-      </section>
+      </aside>
 
       <section className="entorno">
         <div className="container">

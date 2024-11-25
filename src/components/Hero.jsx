@@ -4,7 +4,7 @@ import Nav from './Nav';
 
 const Hero = ({ title, paragraph, buttonText, buttonLink, image1, image2, variant }) => {
   return (
-    <section className={`hero ${variant === 'main' ? 'hero--main' : 'hero--default'}`}>
+    <div className={`hero ${variant === 'main' ? 'hero--main' : 'hero--default'}`}>
       <Nav />
       <div className="container">
         <div className="hero-content">
@@ -40,7 +40,7 @@ const Hero = ({ title, paragraph, buttonText, buttonLink, image1, image2, varian
           </div>
         )}
       </div>
-    </section>
+    </div>
   );
 };
 

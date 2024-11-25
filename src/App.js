@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Main from './components/Main';
 import About from './components/About';
 import Menu from './components/Menu';
-import Hero from './components/Hero';
 import Booking from './components/Booking';
 
 function App() {

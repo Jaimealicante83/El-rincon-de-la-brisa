@@ -1,12 +1,12 @@
 .nuestros-platos {
     .container {
       display: grid;
-      grid-template-columns: 25% 25% 1fr; // First two columns are 20%, last column fills the rest
+      grid-template-columns: 25% 25% 42%; // First two columns are 20%, last column fills the rest
       grid-template-rows: 1fr; // Make the row stretch to fill the container
       grid-template-areas:
         "box-texto box-texto imagen-ostra"
         "imagen-risotto imagen-caballa imagen-ostra";
-      gap: 4rem; // Space between elements
+      gap: 4%; // Space between elements
   
       height: 100%; // Ensure the grid container takes up full height
       align-items: stretch; // Make all items stretch vertically
@@ -53,7 +53,7 @@
             justify-self: flex-end;
         }
         img {
-          width: 100%;
+          width: auto;
           //max-height: 80%;
         }
       }
@@ -72,9 +72,9 @@
   
     .productos-frescos-wrapper {
       display: grid;
-      grid-template-columns: 50% 25% 25%; // Tres columnas
+      grid-template-columns: 48% 20% 25%; // Tres columnas
       grid-template-rows: auto auto; // Dos filas
-      gap: 4rem; // Espaciado entre elementos
+      gap: 3.5%; // Espaciado entre elementos
       height: 100vh; // Altura total para ocupar toda la vista
   
       .large-img {
@@ -141,6 +141,7 @@
     .container {
       display: flex;
       flex-direction: column;
+      width: 100%; /* Asegura que el container no exceda el ancho del padre */
   
       h2 {
         text-align: left;
@@ -148,71 +149,70 @@
   
       .lugar-wrapper {
         display: grid;
-        grid-template-columns: 30% 70%; // La primera columna ocupa el 30%, la segunda el 70%
-        grid-template-rows: auto 1fr; // Dos filas: la primera para texto, la segunda para contenido dinámico
-        column-gap: 5rem; // 5rem de espacio entre columnas
-        row-gap: 1rem;
+        grid-template-columns: 30% 67%; /* Cambia 30% y 70% a fracciones más adaptables */
+        grid-template-rows: auto 1fr; /* Dos filas: texto e imágenes */
+        column-gap: 2.5%; /* Espaciado entre columnas */
+        row-gap: 1rem; /* Espaciado entre filas */
   
         p {
-          grid-column: 1 / 2; // Ocupa la primera columna
-          grid-row: 1 / span 2; // Se extiende por ambas filas en la primera columna
-          margin-right: 7%;
+          grid-column: 1 / 2; /* Primera columna */
+          grid-row: 1 / span 2; /* Ocupa dos filas */
         }
   
         img:first-of-type {
-          grid-column: 1 / 2; // Primera columna
-          grid-row: 2; // Segunda fila
+          grid-column: 1 / 2; /* Primera columna */
+          grid-row: 2; /* Segunda fila */
           width: 100%;
+          max-width: 100%; /* Restricción máxima para evitar desbordes */
+          object-fit: cover; /* Ajusta la imagen sin deformarla */
           align-self: flex-end;
-          object-fit: cover; // Ajusta la imagen para que no se deforme
         }
   
         .caption {
-          grid-column: 2 / 3; // Segunda columna
-          grid-row: 1; // Primera fila
+          grid-column: 2 / 3; /* Segunda columna */
+          grid-row: 1; /* Primera fila */
           text-align: right;
-          max-width: 30%;
+          max-width: 40%; /* Asegura que no desborde */
           justify-self: flex-end;
-          align-self: flex-end;
-          margin-right: 0;
-          margin-bottom: 0;
         }
   
         img:last-of-type {
-          grid-column: 2 / 3; // Segunda columna
-          grid-row: 2; // Segunda fila
+          grid-column: 2 / 3; /* Segunda columna */
+          grid-row: 2; /* Segunda fila */
           width: 100%;
-          height: 100%;
-          object-fit: cover; // Ajusta la imagen para que no se deforme
+          max-width: 100%; /* Restricción máxima */
+          object-fit: cover;
+          justify-self: flex-end;
         }
       }
     }
   
-    // Estilo responsivo
+    /* Estilo responsivo */
     @media (max-width: 768px) {
       .lugar-wrapper {
-        grid-template-columns: 1fr; // Cambia a una sola columna
-        grid-template-rows: auto auto auto auto; // Reajusta filas para cada elemento
+        grid-template-columns: 1fr; /* Una sola columna */
+        grid-template-rows: auto auto auto auto; /* Reajusta filas para cada elemento */
   
         p {
-          grid-column: 1; // Toma toda la columna
-          grid-row: 1; // Primera fila
+          grid-column: 1; /* Toma toda la columna */
+          grid-row: 1; /* Primera fila */
+          margin-right: 0;
         }
   
         img:first-of-type {
-          grid-column: 1; // Toma toda la columna
-          grid-row: 2; // Segunda fila
+          grid-column: 1; /* Toma toda la columna */
+          grid-row: 2; /* Segunda fila */
         }
   
         .caption {
-          grid-column: 1; // Toma toda la columna
-          grid-row: 3; // Tercera fila
+          grid-column: 1; /* Toma toda la columna */
+          grid-row: 3; /* Tercera fila */
           text-align: center;
         }
   
         img:last-of-type {
-          grid-column: 1; // Toma toda la columna
-          grid-row: 4; // Última fila
+          grid-column: 1; /* Toma toda la columna */
+          grid-row: 4; /* Última fila */
         }
       }
     }
@@ -221,100 +221,7 @@
   .equipo {
     .container {
       display: grid;
-      grid-template-columns: 60% 40%; // Dos columnas: texto y parte visual
-      grid-template-rows: auto auto auto; // Tres filas principales
-      grid-template-areas:
-        "titulo cocinero-atardecer"
-        "texto cocinero-atardecer"
-        "equipo derecha"; // Imágenes paralelas y equipo abajo
-      gap: 2rem; // Espaciado general entre elementos
-  
-      h2 {
-        grid-area: titulo; // Zona del título arriba a la izquierda
-        align-self: start;
-        text-align: left;
-        margin-bottom: 1rem;
-      }
-  
-      .caption {
-        grid-area: texto; // Zona del texto descriptivo
-        font-size: 1rem;
-        line-height: 1.5;
-      }
-  
-      img:nth-of-type(1) {
-        grid-area: cocinero-atardecer; // Imagen del cocinero al atardecer
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        border-radius: 8px;
-      }
-  
-      img:nth-of-type(2) {
-        grid-area: equipo; // Imagen del equipo (abajo a la izquierda)
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        border-radius: 8px;
-      }
-  
-      .imagenes-derecha {
-        grid-area: derecha; // Zona de imágenes pequeñas en la derecha
-        display: grid;
-        grid-template-columns: 1fr; // Una columna
-        grid-template-rows: repeat(3, 1fr); // Tres filas iguales
-        gap: 1rem;
-  
-        img {
-          width: 100%;
-          height: auto;
-          object-fit: cover;
-          border-radius: 8px;
-        }
-  
-        img:nth-of-type(1) {
-          grid-row: 1; // Primera imagen de la derecha
-        }
-  
-        img:nth-of-type(2) {
-          grid-row: 2; // Segunda imagen de la derecha
-        }
-  
-        img:nth-of-type(3) {
-          grid-row: 3; // Tercera imagen de la derecha
-        }
-      }
-    }
-  
-    // Estilo responsivo
-    @media (max-width: 768px) {
-      .container {
-        grid-template-columns: 1fr; // Una sola columna en dispositivos pequeños
-        grid-template-rows: auto auto auto auto auto auto; // Distribuye elementos en filas
-        grid-template-areas:
-          "titulo"
-          "texto"
-          "cocinero-atardecer"
-          "equipo"
-          "derecha";
-        gap: 1rem;
-      }
-  
-      h2,
-      .caption {
-        grid-column: 1; // Ocupan toda la columna
-      }
-  
-      img {
-        grid-column: 1; // Ocupan toda la columna
-        width: 100%;
-      }
-    }
-  }
-  .equipo {
-    .container {
-      display: grid;
-      grid-template-columns: 70% 30%; // Dos columnas principales
+      grid-template-columns: 68% 30%; // Dos columnas principales
       grid-template-rows: auto auto auto; // Tres filas principales
       grid-template-areas:
         "titulo cocinero-atardecer"
@@ -341,26 +248,33 @@
         height: 100%;
         object-fit: cover;
       }
+
+      #foto-equipo{
+        align-self: flex-end;
+      }
+
+      .cocinerotarde{
+        max-height: 12rem;
+        align-self: flex-end;
+      }
   
       img:nth-of-type(2) {
         grid-area: equipo; // Imagen del equipo de cocineros (abajo a la izquierda)
         width: 100%;
         height: auto;
         object-fit: cover;
-        border-radius: 8px;
       }
   
       .imagenes-derecha {
         grid-area: cocinera-camarero; // Área de cocinera y camarero
         display: flex;
         gap: 2rem;
-        height: 20rem;
+        height: 18rem;
   
         img {
           width: 100%;
           height: auto;
           object-fit: cover;
-          border-radius: 8px;
         }
   
         img:nth-of-type(1) {
@@ -377,7 +291,6 @@
         width: 40%;
         height: auto;
         object-fit: cover;
-        border-radius: 8px;
       }
     }
   

@@ -31,7 +31,7 @@ const About = () => {
           </div>
           <div className="imagen-caballa">
             <p className="caption">Caballa a la brasa, una especialidad que realza los sabores del mar desde nuestra carta original. 
-              Disfruta su frescura y esencia única.</p>
+              Disfruta su frescura única.</p>
             <img src="/caballa.jpg" alt="Caballa" />
           </div>
           <div className="imagen-ostra">
@@ -88,8 +88,8 @@ const About = () => {
             una experiencia gastronómica que respeta las raíces mediterráneas, con un toque especial que
             hace cada creación memorable. Su compromiso y pasión garantizan que cada visita sea única y llena de sabor.
           </p>
-          <img src="./cocinero-atardecer.jpg" alt="Un cocinero prepara un plato en la terraza al atardecer" />
-          <img src="./equipo-cocina.jpg" alt="El equipo de cocineros del rincón de la brisa" />
+          <img src="./cocinero-atardecer.jpg" class="cocinerotarde" alt="Un cocinero prepara un plato en la terraza al atardecer" />
+          <img src="./equipo-cocina.jpg" id="foto-equipo" alt="El equipo de cocineros del rincón de la brisa" />
           <div className="imagenes-derecha">
             <img src="./cocinera.jpg" alt="Una cocinera en nuestra terraza" />
             <img src="./camarero.jpg" alt="Un camarero en la terraza" />
