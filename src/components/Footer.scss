@@ -1,0 +1,133 @@
+@import '../styles/variables';
+@import '../styles/globals';
+
+.footer {
+  background-color: $footer-blue;
+  color: #fff;
+  padding: 5rem 2rem 7rem;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-columns {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .footer-column {
+    box-sizing: border-box;
+
+    h4 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+      color: $white;
+    }
+
+    p,
+    a {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #ddd;
+    }
+
+    a {
+      text-decoration: none;
+      color: #f5a623;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin-bottom: 8px;
+
+        a {
+          text-decoration: none;
+          color: #ddd;
+
+          &:hover {
+            color: #f5a623;
+          }
+        }
+      }
+    }
+
+    .footer-logo {
+      max-width: 4rem;
+      margin-bottom: 20px;
+    }
+
+    .footer-redes {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+
+    .footer-map {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #444;
+      border-radius: 8px;
+    }
+
+    i {
+      font-size: 20px;
+      margin-right: 10px;
+      color: #f5a623;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer-columns {
+      flex-direction: column; /* Cambia a columnas apiladas */
+      align-items: center; /* Centra las columnas */
+      gap: 2rem; /* Espaciado entre columnas */
+    }
+
+    .footer-column {
+      width: 100%; /* Cada columna ocupa el ancho completo */
+      text-align: center;
+
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+
+      .footer-map {
+        min-width: auto; /* Elimina la restricción de ancho mínimo */
+        margin: 0 auto; /* Centra el mapa */
+      }
+
+      .footer-redes {
+        justify-content: center; /* Centra las redes sociales */
+        gap: 1rem; /* Mayor espacio entre íconos */
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .footer {
+      padding: 3rem 1rem 5rem; /* Reduce el padding en dispositivos más pequeños */
+    }
+
+    .footer-column {
+      h4 {
+        font-size: 1.8rem; /* Ajusta el tamaño del encabezado */
+      }
+    }
+  }
+}

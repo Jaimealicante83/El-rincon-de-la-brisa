@@ -52,8 +52,7 @@ const About = () => {
               personalmente cada ingrediente, para que solo lo más fresco y
               selecto llegue a nuestra cocina. Seguimos cada paso del proceso
               con dedicación y cariño, desde la cuidadosa elección de los
-              productos hasta el momento final del servicio en mesa. La calidad
-              es el centro de todo lo que hacemos.
+              productos hasta el momento final del servicio en mesa. 
             </p>
             <img src="./verduras.jpg" alt="Verduras" class="small-img" />
             <img src="./cortando-verduras.jpg" alt="Un cocinero corta verduras" class="wide-img" />

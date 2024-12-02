@@ -43,23 +43,27 @@ section{
   margin: 0 auto;
   padding: 0 2rem;
   @media screen and (min-width: 993px){
-    max-width: 120rem; 
+    max-width: 90rem; 
     display: flex;
    // margin: 12rem auto;
    margin: 0 auto;
    padding: 0;;
   }
+  @media screen and (min-width: 1257px){
+    max-width: 120rem; 
+  }
 }
 
 /* Global Typography Styles */
 h1, h2, h3, h4, h5, h6 {
-    font-size: 4rem;
     font-family: $font-primary;
     font-weight: 300;
     text-transform: uppercase; /* Todos los títulos y subtítulos en mayúsculas */
   }
 
   h2{
+    font-size: $font-size-title-sm;
+    line-height: $line-height-title-sm;
     margin-bottom: 4rem;
   }
   
@@ -70,10 +74,13 @@ h1, h2, h3, h4, h5, h6 {
     line-height: $line-height-paragraph;
   }
   .caption{
+    font-size: 1.2rem;
     font-family: $font-secondary;
-    font-size: 1.4rem;
     line-height: 1.8rem;
     font-weight: 300;
+    @media screen and (min-width: 993px){
+      font-size: 1.4rem;
+    }
   }
   .mini-subtitulo{
     font-size: 2.4rem;
@@ -109,6 +116,16 @@ h1, h2, h3, h4, h5, h6 {
   
     &:active {
       transform: scale(0.98); /* Efecto al presionar el botón */
+    }
+  }
+
+  .btn-blue{
+    background-color: $footer-blue;
+    color: $white;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    &:hover{
+      background-color: $dark-blue;
     }
   }
   

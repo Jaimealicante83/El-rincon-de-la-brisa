@@ -1,50 +1,63 @@
-@import '../styles/variables';
-@import '../styles/globals';
-
 .nav {
-    padding: 1rem; /* 10px */
-    position: absolute;
-    top: 2rem;
-    width: 100%;
-  
-    .container-nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 90%;
-      margin: 0 auto;
-      img{
-        height: 5rem;
-        width: auto;
+  padding: 1rem;
+  position: absolute;
+  top: 2rem;
+  width: 100%;
+  z-index: 10;
+  transition: all 0.3s ease-in-out;
+
+  &.nav-fixed {
+    position: fixed;
+    top: 0;
+    background-color: #002B4C;
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .container-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+
+    img {
+      height: 5rem;
+      width: auto;
+
+      @media screen and (max-width: 768px) {
+        height: 4rem;
       }
     }
-  
-    .nav-list {
-      list-style: none;
-      display: flex;
-      justify-content: space-around;
-      margin: 0;
-      padding: 0;
-      @media screen and (max-width: 768px){
-        display: none;
-      }
+  }
 
-      .nav-item {
-        margin: 0;
-        a {
-          font-size: 1.4rem;
-          color: white;
-          text-decoration: none;
-          padding: 1rem 2rem; 
-          display: block;
-          text-transform: uppercase;
-          transition: all .3s ease-in-out;
-  
-          &:hover {
-           color:yellow;
-          }
+  .nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+
+    .nav-item {
+      margin: 0;
+
+      a {
+        font-size: 1.4rem;
+        color: white;
+        text-decoration: none;
+        padding: 1rem 2rem;
+        display: block;
+        text-transform: uppercase;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          color: rgb(215, 215, 215);
         }
       }
     }
   }
-  
+}

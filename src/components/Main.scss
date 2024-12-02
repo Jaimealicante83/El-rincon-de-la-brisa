@@ -16,7 +16,10 @@
       justify-content: center;
 
       h2 {
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
+        @media screen and (min-width: 1257px){
+          margin-bottom: 2rem;
+        }
       }
 
       p {
@@ -38,7 +41,7 @@
   }
 
   /* Desktop layout (screens wider than 992px) */
-  @media (min-width: 993px) {
+  @media (min-width:768px) {
     .container {
       flex-direction: row; /* Switch to side-by-side layout */
       gap: 15rem;
@@ -64,18 +67,31 @@
     width: 100%;
     position: relative;
     img{
-        height: 45rem;
+      height: auto;
+      width: auto;
+      @media screen and (min-width: 768px){
+        height:  45rem;
         width: 100%;
         object-fit: cover;
+      }
+       
     }
     .cita{
+      font-size: 2rem;
+      line-height: 2.6rem;
+      width: 80%;
+      z-index: 4;
+      position: absolute;
+      text-align: center;
+      top: 50%;
+      left: 50%;
+      color: $white;
+      transform: translate(-50%, -50%); 
+      @media screen and (min-width: 993px){
         font-size: 3rem;
-        z-index: 4;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        color: $white;
-        transform: translate(-50%, -50%); 
+        line-height: 3.8rem;
+        width: 50%;
+      }
     }
   }
 
@@ -96,6 +112,13 @@
   
       h2 {
         color: $black-text;
+        margin-bottom: 1rem;
+        @media screen and (min-width: 993px){
+          margin-bottom: 2rem;
+        }
+        @media screen and (min-width: 1257px){
+          margin-bottom: 3rem;
+        }
       }
   
       .caption {
@@ -139,7 +162,7 @@
     }
   
     /* Desktop layout (993px and wider) */
-    @media (min-width: 993px) {
+    @media (min-width: 768px) {
       .container {
         grid-template-rows: auto auto auto auto; /* Adjust rows naturally */
         grid-template-columns: 1fr 1fr 0.5fr 2.5fr; /* Desktop multi-column layout */
@@ -157,8 +180,12 @@
         }
   
         .div5 {
-          margin-left: 40%; /* Restore desktop-specific margin */
+          margin-left: 32%; /* Restore desktop-specific margin */
           text-align: right; /* Align text to the right */
+          align-self: flex-end;
+          .caption{
+            margin-bottom: -1rem; /* Ajusta este valor según el `gap` */
+          }
         }
   
         .div6 {
@@ -180,6 +207,13 @@
 
       h2 {
         /* Optional styles for the heading */
+        margin-bottom: 1.5rem;
+        @media screen and (min-width: 993px){
+          margin-bottom: 2rem;
+        }
+        @media screen and (min-width: 1257px){
+          margin-bottom: 3rem;
+        }
       }
 
       .wrapper-platos {
@@ -188,7 +222,7 @@
         justify-content: space-between; 
         align-items: flex-start; 
         flex-wrap: wrap; 
-        @media screen and (min-width: 993px){
+        @media screen and (min-width: 768px){
           flex-direction: row;
           gap: 3rem; /* Add space between cards */
         }
@@ -238,6 +272,12 @@
 
 
   .chef-morales{
+    h2{
+      margin-bottom: 1rem;
+      @media screen and (min-width: 993px){
+        margin-bottom: 2rem;
+      }
+    }
     .container{
       display: flex;
       flex-direction: column;
@@ -266,6 +306,12 @@
           }
         img{
           width: 50%;
+          @media screen and (min-width: 993px){
+            width: 30%;
+          }
+          @media screen and (min-width: 1257px){
+            width: 39%;
+          }
         }
       }
     }

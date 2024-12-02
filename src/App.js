@@ -4,6 +4,7 @@ import Main from './components/Main';
 import About from './components/About';
 import Menu from './components/Menu';
 import Booking from './components/Booking';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/booking" element={<Booking />} />
         </Routes>
       </div>
+      <Footer />
     </Router>
   );
 }

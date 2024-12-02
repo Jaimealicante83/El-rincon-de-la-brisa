@@ -1,21 +1,32 @@
 .nuestros-platos {
     .container {
-      display: grid;
-      grid-template-columns: 25% 25% 42%; // First two columns are 20%, last column fills the rest
-      grid-template-rows: 1fr; // Make the row stretch to fill the container
-      grid-template-areas:
-        "box-texto box-texto imagen-ostra"
-        "imagen-risotto imagen-caballa imagen-ostra";
-      gap: 4%; // Space between elements
-  
-      height: 100%; // Ensure the grid container takes up full height
-      align-items: stretch; // Make all items stretch vertically
+      display: flex;
+      flex-direction: column;
+      @media screen and (min-width: 993px){
+        display: grid;
+        grid-template-columns: 25% 25% 42%; // First two columns are 20%, last column fills the rest
+        grid-template-rows: 1fr; // Make the row stretch to fill the container
+        grid-template-areas:
+          "box-texto box-texto imagen-ostra"
+          "imagen-risotto imagen-caballa imagen-ostra";
+        gap: 4%; // Space between elements
+    
+        height: 100%; // Ensure the grid container takes up full height
+        align-items: stretch; // Make all items stretch vertically
+      }
+
   
       .box-texto {
         grid-area: box-texto; // Occupies the left column
-        max-width: 70%;
+        max-width: 100%;
+        @media screen and (min-width: 993px){
+          max-width: 70%;
+        }
         h2 {
-
+          margin-bottom: 1.5rem;
+          @media screen and (min-width: 1257px){
+            margin-bottom: 2rem;
+          }
         }
         p {
           margin-bottom: 5rem;
@@ -49,8 +60,9 @@
         justify-self: flex-end; // Stretch horizontally
         align-self: flex-end; // Stretch vertically
         .caption{
-            max-width: 60%;
+            max-width: 70%;
             justify-self: flex-end;
+            margin-bottom: 1rem;
         }
         img {
           width: auto;
@@ -62,7 +74,11 @@
   
   .productos-frescos {
     h2 {
+      margin-bottom: 1.5rem;
       text-align: left;
+      @media screen and (min-width: 1257px){
+        margin-bottom: 2rem;
+      }
     }
   
     .container {
@@ -144,19 +160,30 @@
       width: 100%; /* Asegura que el container no exceda el ancho del padre */
   
       h2 {
+        margin-bottom: 1.5rem;
         text-align: left;
+        @media screen and (min-width: 1257px){
+          margin-bottom: 2rem;
+        }
       }
   
       .lugar-wrapper {
-        display: grid;
-        grid-template-columns: 30% 67%; /* Cambia 30% y 70% a fracciones más adaptables */
-        grid-template-rows: auto 1fr; /* Dos filas: texto e imágenes */
-        column-gap: 2.5%; /* Espaciado entre columnas */
-        row-gap: 1rem; /* Espaciado entre filas */
-  
+        display: flex;
+        flex-direction: column;
+        @media screen and (min-width: 993px){
+          display: grid;
+          grid-template-columns: 30% 67%; /* Cambia 30% y 70% a fracciones más adaptables */
+          grid-template-rows: auto 1fr; /* Dos filas: texto e imágenes */
+          column-gap: 2.5%; /* Espaciado entre columnas */
+          row-gap: 1rem; /* Espaciado entre filas */
+        }
         p {
           grid-column: 1 / 2; /* Primera columna */
           grid-row: 1 / span 2; /* Ocupa dos filas */
+          margin-bottom: 2rem;
+          @media screen and (min-width: 993px){
+            margin-bottom: 0;
+          }
         }
   
         img:first-of-type {
@@ -172,8 +199,12 @@
           grid-column: 2 / 3; /* Segunda columna */
           grid-row: 1; /* Primera fila */
           text-align: right;
-          max-width: 40%; /* Asegura que no desborde */
+          max-width: 100%; /* Asegura que no desborde */
           justify-self: flex-end;
+          @media screen and (min-width: 993px){
+            max-width: 40%;
+            
+          }
         }
   
         img:last-of-type {
@@ -239,7 +270,12 @@
   
       p {
         grid-area: texto; // Zona del texto descriptivo
-        width: 86%;
+        width: 100%;
+        margin-bottom: 1rem;
+        @media screen and (min-width: 993px){
+          width: 86%;
+          margin-bottom: 0;
+        }
       }
   
       img:nth-of-type(1) {
@@ -268,8 +304,11 @@
       .imagenes-derecha {
         grid-area: cocinera-camarero; // Área de cocinera y camarero
         display: flex;
-        gap: 2rem;
+        gap: 1rem;
         height: 18rem;
+        @media screen and (min-width: 993px){
+          gap: 2rem;
+        }
   
         img {
           width: 100%;

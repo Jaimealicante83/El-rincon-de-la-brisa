@@ -31,7 +31,7 @@ const Main = () => {
                 equipo de chefs trabaja con pasión para presentar platos que cuentan una historia,
                 cuidadosamente elaborados para brindar una experiencia inolvidable.
             </p>
-            <button className="btn">Ver más</button>
+            <button className="btn btn-blue">Ver más</button>
           </div>
           <div className="box-img">
             <img src="/el-restaurante.jpg" alt="Restaurante" />
@@ -40,7 +40,11 @@ const Main = () => {
       </section>
       
       <aside className="banner">
-      <img src="/banner.jpg" alt="Banner" />
+        <picture>
+          <source srcSet="/banner-mobile.jpg" media="(max-width: 767px)" />
+          <source srcSet="/banner.jpg" media="(min-width: 768px)" />
+          <img src="/banner.jpg" alt="Banner" />
+        </picture>
         <h2 class="cita">“Disfruta de una experiencia gastronomica sin igual 
         en la terraza con vistas al Mediterraneo”</h2>
       </aside>
@@ -69,7 +73,7 @@ const Main = () => {
 
       <section className="nuestra-cocina">
         <div className="container">
-          <h2>Nuestro restaurante</h2>
+          <h2>Nuestra cocina</h2>
           <div className="wrapper-platos">
             <div className="card-plato">
               <img src="/bistec.jpg" alt="Bistec" />
