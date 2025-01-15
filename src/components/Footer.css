@@ -9,6 +9,16 @@ body, html {
 /* Fuente para párrafos */
 /* Tamaños Tipográficos */
 /* Tamaños generales */
+/* Colores */
+body, html {
+  font-size: 62.5%;
+}
+
+/* Tipografía */
+/* Fuente para títulos */
+/* Fuente para párrafos */
+/* Tamaños Tipográficos */
+/* Tamaños generales */
 /* Importa las variables */
 /* Reset CSS */
 * {
@@ -146,4 +156,110 @@ p {
 }
 .btn-blue:hover {
   background-color: #016c8e;
-}/*# sourceMappingURL=globals.css.map */
+}
+
+.footer {
+  background-color: #002B4C;
+  color: #fff;
+  padding: 5rem 2rem 7rem;
+  /* Responsive Design */
+}
+.footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer .footer-columns {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.footer .footer-column {
+  box-sizing: border-box;
+}
+.footer .footer-column h4 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+.footer .footer-column p,
+.footer .footer-column a {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ddd;
+}
+.footer .footer-column a {
+  text-decoration: none;
+  color: #f5a623;
+}
+.footer .footer-column a:hover {
+  text-decoration: underline;
+}
+.footer .footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer .footer-column ul li {
+  margin-bottom: 8px;
+}
+.footer .footer-column ul li a {
+  text-decoration: none;
+  color: #ddd;
+}
+.footer .footer-column ul li a:hover {
+  color: #f5a623;
+}
+.footer .footer-column .footer-logo {
+  max-width: 4rem;
+  margin-bottom: 20px;
+}
+.footer .footer-column .footer-redes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.footer .footer-column .footer-map {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #444;
+  border-radius: 8px;
+}
+.footer .footer-column i {
+  font-size: 20px;
+  margin-right: 10px;
+  color: #f5a623;
+}
+.footer .footer-column i:hover {
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .footer .footer-columns {
+    flex-direction: column; /* Cambia a columnas apiladas */
+    align-items: center; /* Centra las columnas */
+    gap: 2rem; /* Espaciado entre columnas */
+  }
+  .footer .footer-column {
+    width: 100%; /* Cada columna ocupa el ancho completo */
+    text-align: center;
+  }
+  .footer .footer-column:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+  .footer .footer-column .footer-map {
+    min-width: auto; /* Elimina la restricción de ancho mínimo */
+    margin: 0 auto; /* Centra el mapa */
+  }
+  .footer .footer-column .footer-redes {
+    justify-content: center; /* Centra las redes sociales */
+    gap: 1rem; /* Mayor espacio entre íconos */
+  }
+}
+@media (max-width: 480px) {
+  .footer .footer {
+    padding: 3rem 1rem 5rem; /* Reduce el padding en dispositivos más pequeños */
+  }
+  .footer .footer-column h4 {
+    font-size: 1.8rem; /* Ajusta el tamaño del encabezado */
+  }
+}/*# sourceMappingURL=Footer.css.map */

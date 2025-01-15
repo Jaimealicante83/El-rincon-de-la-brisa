@@ -1,5 +1,6 @@
 import React from 'react';
 import Hero from './Hero.jsx';
+import { Link } from 'react-router-dom';
 import '../reset.css';
 import './Main.scss';
 
@@ -12,7 +13,7 @@ const Main = () => {
         que despierta todos los sentidos. En cada plato, combinamos técnicas innovadoras con los 
         mejores ingredientes de la región, creando una fusión"
         buttonText="Reservar"
-        buttonLink="#reservar"
+        buttonLink="/booking"
         image1="/plato.png"
         variant="main"
       />
@@ -31,7 +32,7 @@ const Main = () => {
                 equipo de chefs trabaja con pasión para presentar platos que cuentan una historia,
                 cuidadosamente elaborados para brindar una experiencia inolvidable.
             </p>
-            <button className="btn btn-blue">Ver más</button>
+            <Link to="/booking" className="btn btn-blue">Reserva</Link>
           </div>
           <div className="box-img">
             <img src="/el-restaurante.jpg" alt="Restaurante" />

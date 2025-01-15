@@ -1,105 +1,17 @@
-@charset "UTF-8";
-/* Colores */
-body, html {
-  font-size: 62.5%;
-}
-
-/* Tipografía */
-/* Fuente para títulos */
-/* Fuente para párrafos */
-/* Tamaños Tipográficos */
-/* Tamaños generales */
-/* Colores */
-body, html {
-  font-size: 62.5%;
-}
-
-/* Tipografía */
-/* Fuente para títulos */
-/* Fuente para párrafos */
-/* Tamaños Tipográficos */
-/* Tamaños generales */
-/* Importa las variables */
-/* Reset CSS */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Lato", sans-serif; /* Fuente global (Lato) */
-  background: #f1f1f1;
-  color: #ffffff; /* Color de texto */
-}
-
-body, html {
-  font-size: 62.5%; /* Tamaño de fuente base */
-}
-
-/* Estilos globales */
-.title-lg {
-  font-family: "Poiret One", sans-serif; /* Fuente para títulos grandes (Poiret One) */
-  font-size: 6.4rem;
-  font-weight: 100;
-  line-height: 6.9rem;
-  margin-bottom: 1.9rem;
-}
-
-.container {
-  max-width: 120rem;
-  display: flex;
-  margin: 16.2rem auto;
-}
-
-/* Global Typography Styles */
-h1, h2, h3, h4, h5, h6 {
-  font-size: 4rem;
-  font-family: "Poiret One", sans-serif;
-  font-weight: 300;
-  text-transform: uppercase; /* Todos los títulos y subtítulos en mayúsculas */
-}
-
-p {
-  font-family: "Lato", sans-serif;
-  font-size: 1.6rem;
-  font-weight: 300;
-  line-height: 2.4rem;
-}
-
-/* Botones estilos */
-.btn {
-  display: inline-flex; /* Alineación flexible */
-  justify-content: center; /* Centrado horizontal */
-  align-items: center; /* Centrado vertical */
-  width: 17.5rem; /* 175px */
-  height: 4.9rem; /* 49px */
-  padding: 0; /* Sin padding adicional */
-  font-family: "Lato", sans-serif; /* Fuente secundaria (Lato) */
-  font-size: 1.6rem; /* 16px */
-  text-transform: uppercase; /* Texto en mayúsculas */
-  text-decoration: none; /* Sin subrayado */
-  text-align: center; /* Centrado del texto */
-  font-weight: bold; /* Peso del texto */
-  color: #ffffff; /* Color del texto */
-  background-color: transparent; /* Fondo transparente */
-  border: 1px solid #ffffff; /* Borde blanco de 1px */
-  border-radius: 0; /* Sin esquinas redondeadas */
-  transition: all 0.3s ease; /* Transición suave para hover */
-}
-.btn:hover {
-  background-color: rgba(255, 255, 255, 0.1); /* Fondo blanco semitransparente */
-  color: #ffffff; /* Asegura que el texto siga siendo blanco */
-}
-.btn:active {
-  transform: scale(0.98); /* Efecto al presionar el botón */
-}
-
 .nav {
-  padding: 1rem; /* 10px */
+  padding: 1rem;
   position: absolute;
   top: 2rem;
   width: 100%;
+  z-index: 10;
+  transition: all 0.3s ease-in-out;
+}
+.nav.nav-fixed {
+  position: fixed;
+  top: 0;
+  background-color: #002B4C;
+  padding: 1rem 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .nav .container-nav {
   display: flex;
@@ -112,12 +24,22 @@ p {
   height: 5rem;
   width: auto;
 }
+@media screen and (max-width: 768px) {
+  .nav .container-nav img {
+    height: 4rem;
+  }
+}
 .nav .nav-list {
   list-style: none;
   display: flex;
   justify-content: space-around;
   margin: 0;
   padding: 0;
+}
+@media screen and (max-width: 768px) {
+  .nav .nav-list {
+    display: none;
+  }
 }
 .nav .nav-list .nav-item {
   margin: 0;
@@ -132,5 +54,5 @@ p {
   transition: all 0.3s ease-in-out;
 }
 .nav .nav-list .nav-item a:hover {
-  color: yellow;
+  color: rgb(215, 215, 215);
 }/*# sourceMappingURL=Nav.css.map */

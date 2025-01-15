@@ -1,0 +1,325 @@
+@charset "UTF-8";
+.nuestros-platos .container {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 993px) {
+  .nuestros-platos .container {
+    display: grid;
+    grid-template-columns: 25% 25% 42%;
+    grid-template-rows: 1fr;
+    grid-template-areas: "box-texto box-texto imagen-ostra" "imagen-risotto imagen-caballa imagen-ostra";
+    gap: 4%;
+    height: 100%;
+    align-items: stretch;
+  }
+}
+.nuestros-platos .container .box-texto {
+  grid-area: box-texto;
+  max-width: 100%;
+}
+@media screen and (min-width: 993px) {
+  .nuestros-platos .container .box-texto {
+    max-width: 70%;
+  }
+}
+.nuestros-platos .container .box-texto h2 {
+  margin-bottom: 1.5rem;
+}
+@media screen and (min-width: 1257px) {
+  .nuestros-platos .container .box-texto h2 {
+    margin-bottom: 2rem;
+  }
+}
+.nuestros-platos .container .box-texto p {
+  margin-bottom: 5rem;
+}
+.nuestros-platos .container .caption {
+  text-align: right;
+  margin-bottom: 1.5rem;
+}
+.nuestros-platos .container .imagen-risotto {
+  grid-area: imagen-risotto;
+  justify-self: stretch;
+  align-self: stretch;
+}
+.nuestros-platos .container .imagen-caballa {
+  grid-area: imagen-caballa;
+}
+.nuestros-platos .container .imagen-ostra {
+  grid-area: imagen-ostra;
+  justify-self: flex-end;
+  align-self: flex-end;
+}
+.nuestros-platos .container .imagen-ostra .caption {
+  max-width: 70%;
+  justify-self: flex-end;
+  margin-bottom: 1rem;
+}
+.nuestros-platos .container .imagen-ostra img {
+  width: auto;
+}
+
+.productos-frescos h2 {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+@media screen and (min-width: 1257px) {
+  .productos-frescos h2 {
+    margin-bottom: 2rem;
+  }
+}
+.productos-frescos .container {
+  display: flex;
+  flex-direction: column;
+}
+.productos-frescos .productos-frescos-wrapper {
+  display: grid;
+  grid-template-columns: 48% 20% 25%;
+  grid-template-rows: auto auto;
+  gap: 3.5%;
+  height: 100vh;
+}
+.productos-frescos .productos-frescos-wrapper .large-img {
+  grid-column: 1/2;
+  grid-row: 1/span 2;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.productos-frescos .productos-frescos-wrapper .caption {
+  grid-column: 2/3;
+  grid-row: 1;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+.productos-frescos .productos-frescos-wrapper .small-img {
+  grid-column: 3/4;
+  grid-row: 1;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.productos-frescos .productos-frescos-wrapper .wide-img {
+  grid-column: 2/4;
+  grid-row: 2/3;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 768px) {
+  .productos-frescos .productos-frescos-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+  }
+  .productos-frescos .productos-frescos-wrapper .large-img {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .productos-frescos .productos-frescos-wrapper .caption {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .productos-frescos .productos-frescos-wrapper .small-img {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .productos-frescos .productos-frescos-wrapper .wide-img {
+    grid-column: 1;
+    grid-row: 4;
+  }
+}
+
+.lugar {
+  /* Estilo responsivo */
+}
+.lugar .container {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Asegura que el container no exceda el ancho del padre */
+}
+.lugar .container h2 {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+@media screen and (min-width: 1257px) {
+  .lugar .container h2 {
+    margin-bottom: 2rem;
+  }
+}
+.lugar .container .lugar-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 993px) {
+  .lugar .container .lugar-wrapper {
+    display: grid;
+    grid-template-columns: 30% 67%; /* Cambia 30% y 70% a fracciones más adaptables */
+    grid-template-rows: auto 1fr; /* Dos filas: texto e imágenes */
+    -moz-column-gap: 2.5%;
+         column-gap: 2.5%; /* Espaciado entre columnas */
+    row-gap: 1rem; /* Espaciado entre filas */
+  }
+}
+.lugar .container .lugar-wrapper p {
+  grid-column: 1/2; /* Primera columna */
+  grid-row: 1/span 2; /* Ocupa dos filas */
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 993px) {
+  .lugar .container .lugar-wrapper p {
+    margin-bottom: 0;
+  }
+}
+.lugar .container .lugar-wrapper img:first-of-type {
+  grid-column: 1/2; /* Primera columna */
+  grid-row: 2; /* Segunda fila */
+  width: 100%;
+  max-width: 100%; /* Restricción máxima para evitar desbordes */
+  -o-object-fit: cover;
+     object-fit: cover; /* Ajusta la imagen sin deformarla */
+  align-self: flex-end;
+}
+.lugar .container .lugar-wrapper .caption {
+  grid-column: 2/3; /* Segunda columna */
+  grid-row: 1; /* Primera fila */
+  text-align: right;
+  max-width: 100%; /* Asegura que no desborde */
+  justify-self: flex-end;
+}
+@media screen and (min-width: 993px) {
+  .lugar .container .lugar-wrapper .caption {
+    max-width: 40%;
+  }
+}
+.lugar .container .lugar-wrapper img:last-of-type {
+  grid-column: 2/3; /* Segunda columna */
+  grid-row: 2; /* Segunda fila */
+  width: 100%;
+  max-width: 100%; /* Restricción máxima */
+  -o-object-fit: cover;
+     object-fit: cover;
+  justify-self: flex-end;
+}
+@media (max-width: 768px) {
+  .lugar .lugar-wrapper {
+    grid-template-columns: 1fr; /* Una sola columna */
+    grid-template-rows: auto auto auto auto; /* Reajusta filas para cada elemento */
+  }
+  .lugar .lugar-wrapper p {
+    grid-column: 1; /* Toma toda la columna */
+    grid-row: 1; /* Primera fila */
+    margin-right: 0;
+  }
+  .lugar .lugar-wrapper img:first-of-type {
+    grid-column: 1; /* Toma toda la columna */
+    grid-row: 2; /* Segunda fila */
+  }
+  .lugar .lugar-wrapper .caption {
+    grid-column: 1; /* Toma toda la columna */
+    grid-row: 3; /* Tercera fila */
+    text-align: center;
+  }
+  .lugar .lugar-wrapper img:last-of-type {
+    grid-column: 1; /* Toma toda la columna */
+    grid-row: 4; /* Última fila */
+  }
+}
+
+.equipo .container {
+  display: grid;
+  grid-template-columns: 68% 30%;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "titulo cocinero-atardecer" "texto cocinero-atardecer" "equipo cocinera-camarero" "equipo chef-atardecer";
+  gap: 2rem;
+}
+.equipo .container h2 {
+  grid-area: titulo;
+  align-self: start;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+.equipo .container p {
+  grid-area: texto;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 993px) {
+  .equipo .container p {
+    width: 86%;
+    margin-bottom: 0;
+  }
+}
+.equipo .container img:nth-of-type(1) {
+  grid-area: cocinero-atardecer;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.equipo .container #foto-equipo {
+  align-self: flex-end;
+}
+.equipo .container .cocinerotarde {
+  max-height: 12rem;
+  align-self: flex-end;
+}
+.equipo .container img:nth-of-type(2) {
+  grid-area: equipo;
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.equipo .container .imagenes-derecha {
+  grid-area: cocinera-camarero;
+  display: flex;
+  gap: 1rem;
+  height: 18rem;
+}
+@media screen and (min-width: 993px) {
+  .equipo .container .imagenes-derecha {
+    gap: 2rem;
+  }
+}
+.equipo .container .imagenes-derecha img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.equipo .container .imagenes-derecha img:nth-of-type(1) {
+  grid-column: 1;
+}
+.equipo .container .imagenes-derecha img:nth-of-type(2) {
+  grid-column: 2;
+}
+.equipo .container img:nth-of-type(5) {
+  grid-area: chef-atardecer;
+  width: 40%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 768px) {
+  .equipo .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas: "titulo" "texto" "cocinero-atardecer" "equipo" "cocinera-camarero" "chef-atardecer";
+    gap: 1rem;
+  }
+  .equipo h2,
+  .equipo .caption {
+    grid-column: 1;
+  }
+  .equipo .imagenes-derecha {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+  .equipo img {
+    grid-column: 1;
+    width: 100%;
+  }
+}/*# sourceMappingURL=About.css.map */
